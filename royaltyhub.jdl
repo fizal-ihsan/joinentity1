@@ -1,0 +1,101 @@
+
+/*
+Asset table here uses the Single Table Inheritance Model.
+*/
+entity Asset {
+    title String,
+    artist String,
+	assetId String,
+    type AssetType
+    isrc String,
+    recordingDuration String,
+    recordingCyearCline String,
+    recordingPyearPline String,
+    recordingMainGenre String,
+    recordingMainGenreSub String,
+    recordingAlternativeGenre String,
+    recordingAlternativeGenreSub String,
+    recordingMasterOwner String,
+    recordingYearRecording String,
+    recordingLocation String,
+    recordingLabelCountry String,
+    recordingBpm String,
+    recordingPublishers String,
+    recordingLabelCopy String,
+    recordingAdditionalLabelCopy String,
+    recordingDescription String,
+    recordingTagWords String,
+    recordingSuggestedUses String,
+    musicalworksTypeOfWork String,
+    musicalworksVersionType String,
+    musicalworksDuration String,
+    musicalworksLanguage String,
+    musicalworksCreationDate LocalDate,
+    musicalworksPublicationDate LocalDate,
+    musicalworksRegistrationNumber String,
+    musicalworksRegistrationDate LocalDate,
+    musicalworksUnclearedSample Boolean,
+    musicalworksControlled Boolean,
+    musicalworksRelatedIsrcs String,
+    musicalworksNotes String,
+    musicalworksTerritory String,
+    musicalworksCrcPublisher String,
+    musicalworksAdministrator String,
+    musicalworksSubPublisher String,
+    musicalworksIncomeCollector String,
+    musicalworksTerritories String,
+    merchItemType String,
+    merchPartNumber String,
+    merchSeasonYear String,
+    merchRelatedTourArtist String,
+    merchManufacturerSupplier String,
+    merchBrand String,
+    merchLimitedEdition Boolean,
+    merchCollectorsEdition Boolean,
+    merchOutOfPrint Boolean,
+    merchTourMerch Boolean,
+    merchItemDescription String
+}
+
+enum AssetType {
+    RECORDING ("Recording"), MUSICALWORKS ("Musical Works"), MERCHANDISE ("Merchandise")
+}
+
+entity Release {
+    catalogNumber String,
+    releaseDate LocalDate,
+    title String,
+    version String,
+    artist String,
+    label String,
+    status ReleaseStatus,
+    type ReleaseType,
+    mediaType ReleaseMediaType,
+    format FormatType
+}
+
+enum ReleaseStatus {
+    //TODO complete this
+    ACTIVE ("Active")
+}
+
+enum ReleaseType {
+    TRACK ("Track"), SINGLE ("Single"), ALBUM ("Album")
+}
+
+enum ReleaseMediaType {
+    CD ("Compact Disc"), VINYL ("Vinyl"), DIGITAL ("Digital")
+}
+
+enum RoyaltyType {
+    ALBUM ("Album")
+}
+
+enum FormatType {
+    DIGITAL (Digital), PHYSICAL (Physical)
+}
+
+relationship OneToMany {
+  Release{assets} to Asset
+//  Release{asset} to Asset
+}
