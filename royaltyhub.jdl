@@ -5,7 +5,6 @@ Asset table here uses the Single Table Inheritance Model.
 entity Asset {
     title String,
     artist String,
-	assetId String,
     type AssetType
     isrc String,
     recordingDuration String,
