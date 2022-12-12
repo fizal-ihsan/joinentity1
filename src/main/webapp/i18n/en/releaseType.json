@@ -1,0 +1,10 @@
+{
+  "joinentityApp": {
+    "ReleaseType": {
+      "null": "",
+      "TRACK": "Track",
+      "SINGLE": "Single",
+      "ALBUM": "Album"
+    }
+  }
+}

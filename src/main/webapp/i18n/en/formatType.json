@@ -1,0 +1,9 @@
+{
+  "joinentityApp": {
+    "FormatType": {
+      "null": "",
+      "DIGITAL": "Digital",
+      "PHYSICAL": "Physical"
+    }
+  }
+}

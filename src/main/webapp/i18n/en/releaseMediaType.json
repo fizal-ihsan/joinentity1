@@ -1,0 +1,10 @@
+{
+  "joinentityApp": {
+    "ReleaseMediaType": {
+      "null": "",
+      "CD": "Compact Disc",
+      "VINYL": "Vinyl",
+      "DIGITAL": "Digital"
+    }
+  }
+}

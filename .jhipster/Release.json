@@ -1,0 +1,68 @@
+{
+  "applications": "*",
+  "changelogDate": "20221212225419",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "release",
+  "fields": [
+    {
+      "fieldName": "catalogNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "releaseDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "version",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "artist",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "label",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ReleaseStatus",
+      "fieldValues": "ACTIVE (Active)"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ReleaseType",
+      "fieldValues": "TRACK (Track),SINGLE (Single),ALBUM (Album)"
+    },
+    {
+      "fieldName": "mediaType",
+      "fieldType": "ReleaseMediaType",
+      "fieldValues": "CD (Compact Disc),VINYL (Vinyl),DIGITAL (Digital)"
+    },
+    {
+      "fieldName": "format",
+      "fieldType": "FormatType",
+      "fieldValues": "DIGITAL (Digital),PHYSICAL (Physical)"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Release",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "asset",
+      "otherEntityRelationshipName": "release",
+      "ownerSide": true,
+      "relationshipName": "asset",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

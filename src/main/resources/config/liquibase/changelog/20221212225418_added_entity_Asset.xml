@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Asset.
+    -->
+    <changeSet id="20221212225418-1" author="jhipster">
+        <createTable tableName="asset">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="artist" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="isrc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_duration" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_cyear_cline" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_pyear_pline" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_main_genre" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_main_genre_sub" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_alternative_genre" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_alternative_genre_sub" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_master_owner" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_year_recording" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_location" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_label_country" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_bpm" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_publishers" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_label_copy" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_additional_label_copy" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_tag_words" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="recording_suggested_uses" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_type_of_work" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_version_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_duration" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_language" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_creation_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_publication_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_registration_number" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_registration_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_uncleared_sample" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_controlled" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_related_isrcs" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_notes" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_territory" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_crc_publisher" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_administrator" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_sub_publisher" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_income_collector" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="musicalworks_territories" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_item_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_part_number" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_season_year" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_related_tour_artist" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_manufacturer_supplier" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_brand" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_limited_edition" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_collectors_edition" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_out_of_print" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_tour_merch" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="merch_item_description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20221212225418-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/asset.csv"
+                  separator=";"
+                  tableName="asset"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="title" type="string"/>
+            <column name="artist" type="string"/>
+            <column name="type" type="string"/>
+            <column name="isrc" type="string"/>
+            <column name="recording_duration" type="string"/>
+            <column name="recording_cyear_cline" type="string"/>
+            <column name="recording_pyear_pline" type="string"/>
+            <column name="recording_main_genre" type="string"/>
+            <column name="recording_main_genre_sub" type="string"/>
+            <column name="recording_alternative_genre" type="string"/>
+            <column name="recording_alternative_genre_sub" type="string"/>
+            <column name="recording_master_owner" type="string"/>
+            <column name="recording_year_recording" type="string"/>
+            <column name="recording_location" type="string"/>
+            <column name="recording_label_country" type="string"/>
+            <column name="recording_bpm" type="string"/>
+            <column name="recording_publishers" type="string"/>
+            <column name="recording_label_copy" type="string"/>
+            <column name="recording_additional_label_copy" type="string"/>
+            <column name="recording_description" type="string"/>
+            <column name="recording_tag_words" type="string"/>
+            <column name="recording_suggested_uses" type="string"/>
+            <column name="musicalworks_type_of_work" type="string"/>
+            <column name="musicalworks_version_type" type="string"/>
+            <column name="musicalworks_duration" type="string"/>
+            <column name="musicalworks_language" type="string"/>
+            <column name="musicalworks_creation_date" type="date"/>
+            <column name="musicalworks_publication_date" type="date"/>
+            <column name="musicalworks_registration_number" type="string"/>
+            <column name="musicalworks_registration_date" type="date"/>
+            <column name="musicalworks_uncleared_sample" type="boolean"/>
+            <column name="musicalworks_controlled" type="boolean"/>
+            <column name="musicalworks_related_isrcs" type="string"/>
+            <column name="musicalworks_notes" type="string"/>
+            <column name="musicalworks_territory" type="string"/>
+            <column name="musicalworks_crc_publisher" type="string"/>
+            <column name="musicalworks_administrator" type="string"/>
+            <column name="musicalworks_sub_publisher" type="string"/>
+            <column name="musicalworks_income_collector" type="string"/>
+            <column name="musicalworks_territories" type="string"/>
+            <column name="merch_item_type" type="string"/>
+            <column name="merch_part_number" type="string"/>
+            <column name="merch_season_year" type="string"/>
+            <column name="merch_related_tour_artist" type="string"/>
+            <column name="merch_manufacturer_supplier" type="string"/>
+            <column name="merch_brand" type="string"/>
+            <column name="merch_limited_edition" type="boolean"/>
+            <column name="merch_collectors_edition" type="boolean"/>
+            <column name="merch_out_of_print" type="boolean"/>
+            <column name="merch_tour_merch" type="boolean"/>
+            <column name="merch_item_description" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,10 @@
+{
+  "joinentityApp": {
+    "AssetType": {
+      "null": "",
+      "RECORDING": "Recording",
+      "MUSICALWORKS": "Musical Works",
+      "MERCHANDISE": "Merchandise"
+    }
+  }
+}

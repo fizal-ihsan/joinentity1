@@ -1,0 +1,229 @@
+{
+  "applications": "*",
+  "changelogDate": "20221212225418",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "asset",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "artist",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "AssetType",
+      "fieldValues": "RECORDING (Recording),MUSICALWORKS (Musical Works),MERCHANDISE (Merchandise)"
+    },
+    {
+      "fieldName": "isrc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingDuration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingCyearCline",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingPyearPline",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingMainGenre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingMainGenreSub",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingAlternativeGenre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingAlternativeGenreSub",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingMasterOwner",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingYearRecording",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingLabelCountry",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingBpm",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingPublishers",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingLabelCopy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingAdditionalLabelCopy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingTagWords",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recordingSuggestedUses",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksTypeOfWork",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksVersionType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksDuration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksLanguage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksCreationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "musicalworksPublicationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "musicalworksRegistrationNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksRegistrationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "musicalworksUnclearedSample",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "musicalworksControlled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "musicalworksRelatedIsrcs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksNotes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksTerritory",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksCrcPublisher",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksAdministrator",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksSubPublisher",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksIncomeCollector",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "musicalworksTerritories",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "merchItemType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "merchPartNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "merchSeasonYear",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "merchRelatedTourArtist",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "merchManufacturerSupplier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "merchBrand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "merchLimitedEdition",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "merchCollectorsEdition",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "merchOutOfPrint",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "merchTourMerch",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "merchItemDescription",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Asset",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "release",
+      "otherEntityRelationshipName": "asset",
+      "ownerSide": false,
+      "relationshipName": "release",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

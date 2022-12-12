@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Release.
+    -->
+    <changeSet id="20221212225419-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="release_id"
+                                 baseTableName="rel_release__asset"
+                                 constraintName="fk_rel_release__asset__release_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="release"/>
+
+        <addForeignKeyConstraint baseColumnNames="asset_id"
+                                 baseTableName="rel_release__asset"
+                                 constraintName="fk_rel_release__asset__asset_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="asset"/>
+    </changeSet>
+</databaseChangeLog>

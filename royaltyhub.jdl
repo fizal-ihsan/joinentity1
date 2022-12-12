@@ -94,7 +94,7 @@ enum FormatType {
     DIGITAL (Digital), PHYSICAL (Physical)
 }
 
-relationship ManyToOne {
-    Release{assets} to Asset
-    Asset{releases} to Release
+relationship ManyToMany {
+    Release{asset} to Asset{release}
 }
+
